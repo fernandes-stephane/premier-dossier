@@ -1,4 +1,4 @@
-drop database exo_workbench;
+
 
 CREATE database IF NOT exists exo_workbench;
 
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS clients(
     cl_prenom VARCHAR(30) NOT NULL,
 	cl_adresse VARCHAR(100) NOT NULL,
 	cl_codepostal INT NOT NULL,
-	cl_ville VARCHAR (30) NOT NULL CHECK (cl_ville = "cannes")
+	cl_ville VARCHAR (30) NOT NULL CHECK (cl_ville = "")
 );
 
 CREATE TABLE IF NOT EXISTS contrat(
@@ -32,7 +32,7 @@ INSERT INTO contrat(co_id, co_date, co_categorie, co_bonusmalus, prix, co_client
 	(14, '2019-10-24', 'tout-risque', 1,200, 7),
 	(13, '2020-01-11', 'tiers', 1.5,  150, 12);
 
-SELECT * FROM contrat;
+SELECT * FROM clients;
 
 
 
